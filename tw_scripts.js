@@ -11,7 +11,7 @@ const def_props = {
 var tw_player = new Twitch.Player("twPlayer", def_props);
 var cur_start = 0;
 var loc_start = 0;
-const base_time = new Date(Date.UTC(2020,5,25,1,0,0,0));
+const base_time = new Date(Date.UTC(2020,4,25,1,0,0,0));
 
 tw_player.addEventListener(Twitch.Player.READY, () => {
   tw_player.setVolume(1.0);
