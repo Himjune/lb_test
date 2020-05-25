@@ -28,8 +28,8 @@ function tw_start_video(vid, time) {
 }
 setInterval(function () {
   //console.log ('tw',tw_player.getCurrentTime(),tw_player.getDuration(),tw_player.getEnded());
-  document.getElementById("st").innerText = cur_start;
-  document.getElementById("lst").innerText = loc_start;
+  document.getElementById("st").innerText = cur_start.getUTCHours() + ':'+cur_start.getUTCMinutes() +':' +cur_start.getUTCSeconds();
+  document.getElementById("lst").innerText = loc_start.getUTCHours() + ':'+loc_start.getUTCMinutes() +':' + loc_start.getUTCSeconds();
   document.getElementById("tpt").innerText = tw_player.getCurrentTime();
   document.getElementById("ip").innerText = loc_start + tw_player.getCurrentTime();
 
