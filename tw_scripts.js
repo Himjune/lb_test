@@ -17,11 +17,11 @@ tw_player.addEventListener(Twitch.Player.READY, () => {
   tw_player.setVolume(1.0);
   tw_player.setMuted(false);
   tw_player.play();
-  cur_start = Date.now();
+  cur_start = new Date(Date.now());
 });
 
 tw_player.addEventListener(Twitch.Player.PLAY, () => {
-  loc_start = Date.now();
+  loc_start = new Date(Date.now());
 });
 
 function tw_start_video(vid, time) {
@@ -33,7 +33,7 @@ setInterval(function () {
   document.getElementById("lst").innerText = loc_start.getUTCHours() + ':'+loc_start.getUTCMinutes() +':' + loc_start.getUTCSeconds();
   document.getElementById("tpt").innerText = tw_player.getCurrentTime();
   document.getElementById("ip").innerText = loc_start.getUTCSeconds() + tw_player.getCurrentTime();
-  console.log(loc_start-base_time);
+  console.log(loc_start,base_time,loc_start-base_time);
   let mts_date = (loc_start-base_time)/1000 + tw_player.getCurrentTime();
   document.getElementById("mts").innerText = mts_date;
 
