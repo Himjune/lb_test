@@ -1,7 +1,7 @@
 const def_props = {
   width: 1280,
   height: 720,
-  channel: "isaharok",
+  channel: "lul_shiro",
   //channel: "himukee",
   layout: "video",
   theme: "dark",
