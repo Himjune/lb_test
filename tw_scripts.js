@@ -11,6 +11,7 @@ const def_props = {
 var tw_player = new Twitch.Player("twPlayer", def_props);
 var cur_start = 0;
 var loc_start = 0;
+const base_time = new Date.UTC(2020,05,25,0,0,0,0);
 
 tw_player.addEventListener(Twitch.Player.READY, () => {
   tw_player.setVolume(1.0);
@@ -32,6 +33,7 @@ setInterval(function () {
   document.getElementById("lst").innerText = loc_start.getUTCHours() + ':'+loc_start.getUTCMinutes() +':' + loc_start.getUTCSeconds();
   document.getElementById("tpt").innerText = tw_player.getCurrentTime();
   document.getElementById("ip").innerText = loc_start.getUTCSeconds() + tw_player.getCurrentTime();
+  document.getElementById("ip").innerText = new Date((base_time-loc_start) + tw_player.getCurrentTime()*1000);
 
 },1000);
 
