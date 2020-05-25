@@ -31,7 +31,7 @@ setInterval(function () {
   document.getElementById("st").innerText = cur_start.getUTCHours() + ':'+cur_start.getUTCMinutes() +':' +cur_start.getUTCSeconds();
   document.getElementById("lst").innerText = loc_start.getUTCHours() + ':'+loc_start.getUTCMinutes() +':' + loc_start.getUTCSeconds();
   document.getElementById("tpt").innerText = tw_player.getCurrentTime();
-  document.getElementById("ip").innerText = loc_start + tw_player.getCurrentTime();
+  document.getElementById("ip").innerText = loc_start.getUTCSeconds() + tw_player.getCurrentTime();
 
 },1000);
 
