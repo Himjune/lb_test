@@ -23,10 +23,6 @@ tw_player.addEventListener(Twitch.Player.PLAY, () => {
   loc_start = Date.now();
 });
 
-tw_player.addEventListener(Twitch.Embed.VIDEO_PLAY, (e) => {
-  console.log('vp:', e)
-});
-
 function tw_start_video(vid, time) {
   tw_player.setVideo('v'+vid, time);
 }
