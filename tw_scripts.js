@@ -33,6 +33,7 @@ setInterval(function () {
   document.getElementById("lst").innerText = loc_start.getUTCHours() + ':'+loc_start.getUTCMinutes() +':' + loc_start.getUTCSeconds();
   document.getElementById("tpt").innerText = tw_player.getCurrentTime();
   document.getElementById("ip").innerText = loc_start.getUTCSeconds() + tw_player.getCurrentTime();
+  console.log(loc_start-base_time);
   let mts_date = (loc_start-base_time)/1000 + tw_player.getCurrentTime();
   document.getElementById("mts").innerText = mts_date;
 
