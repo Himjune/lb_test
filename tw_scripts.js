@@ -31,7 +31,7 @@ setInterval(function () {
   document.getElementById("st").innerText = cur_start;
   document.getElementById("lst").innerText = loc_start;
   document.getElementById("tpt").innerText = tw_player.getCurrentTime();
-  document.getElementById("ip").innerText = cur_start + tw_player.getCurrentTime();
+  document.getElementById("ip").innerText = loc_start + tw_player.getCurrentTime();
 
 },1000);
 
