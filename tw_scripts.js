@@ -16,11 +16,11 @@ tw_player.addEventListener(Twitch.Player.READY, () => {
   tw_player.setVolume(1.0);
   tw_player.setMuted(false);
   tw_player.play();
-  cur_start = Date.now();
+  cur_start = new Date();
 });
 
 tw_player.addEventListener(Twitch.Player.PLAY, () => {
-  loc_start = Date.now();
+  loc_start = new Date();
 });
 
 function tw_start_video(vid, time) {
