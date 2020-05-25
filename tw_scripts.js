@@ -23,15 +23,19 @@ tw_player.addEventListener(Twitch.Player.PLAY, () => {
   loc_start = Date.now();
 });
 
+tw_player.addEventListener(Twitch.Embed.VIDEO_PLAY, (e) => {
+  console.log('vp:', e)
+});
+
 function tw_start_video(vid, time) {
   tw_player.setVideo('v'+vid, time);
 }
 setInterval(function () {
   //console.log ('tw',tw_player.getCurrentTime(),tw_player.getDuration(),tw_player.getEnded());
   document.getElementById("st").innerText = cur_start;
-  document.getElementById("tpt").innerText = tw_player.tw_player.getCurrentTime();
   document.getElementById("lst").innerText = loc_start;
-  document.getElementById("ip").innerText = cur_start + tw_player.tw_player.getCurrentTime();
+  document.getElementById("tpt").innerText = tw_player.getCurrentTime();
+  document.getElementById("ip").innerText = cur_start + tw_player.getCurrentTime();
 
 },1000);
 
