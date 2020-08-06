@@ -38,7 +38,7 @@ setInterval(function () {
   let mts_date = (loc_start-base_time)/1000 + tw_player.getCurrentTime();
   document.getElementById("mts").innerText = mts_date;
 
-  console.log('q:', tw_player.getQualities())
+  console.log('q:', tw_player.getQualities(), tw_player.getQuality())
 },1000);
 
 /*
