@@ -14,6 +14,7 @@ var loc_start = 0;
 const base_time = new Date(Date.UTC(2020,4,25,1,0,0,0));
 
 tw_player.addEventListener(Twitch.Player.READY, () => {
+  tw_player.setQuality("160p");
   tw_player.setVolume(1.0);
   tw_player.setMuted(false);
   tw_player.play();
