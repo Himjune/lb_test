@@ -1,7 +1,7 @@
 const def_props = {
   width: 1280,
   height: 720,
-  channel: "lul_shiro",
+  channel: "t_sven",
   //channel: "himukee",
   layout: "video",
   theme: "dark",
@@ -37,6 +37,7 @@ setInterval(function () {
   let mts_date = (loc_start-base_time)/1000 + tw_player.getCurrentTime();
   document.getElementById("mts").innerText = mts_date;
 
+  console.log('q:', tw_player.getQualities())
 },1000);
 
 /*
